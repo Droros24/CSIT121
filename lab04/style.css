@@ -1,0 +1,13 @@
+body{
+   color: yellow;
+    background-image: url("images/neon1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p{
+    color:aliceblue
+}
+a{
+    color:rgb(233, 231, 231)
+}
