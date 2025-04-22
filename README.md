@@ -6,6 +6,7 @@ Home of my HTML projects this semester.
 <a href="lab03/index.html" target="_blank">lab 03</a> 
 <a href="lab05/index.html" target="_blank">lab 05</a> 
 <a href="lab06/index.html" target="_blank">lab 06</a> 
+<a href="lab07/tierlist.html" target="_blank">lab 07</a> 
 
 
 
