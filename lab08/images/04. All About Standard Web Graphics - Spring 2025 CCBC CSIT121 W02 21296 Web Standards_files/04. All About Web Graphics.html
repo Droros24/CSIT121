@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<!-- saved from url=(0149)https://ccbcmd.brightspace.com/content/enforced/157344-21296.202521/Module%2004/04.%20All%20About%20Web%20Graphics.html?ou=157344&d2l_body_type=3#gif -->
+<html lang="en" data-mathjax-context="{&quot;outputScale&quot;:1.5}"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Elements Page</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap CDN CSS -->
+	<link rel="stylesheet" href="./bootstrap.min.css">
+
+	<!-- Course Styles -->
+	<link rel="stylesheet" href="./main.min.css"> <script src="./scripts.min.js.download" defer=""></script><script>function lti_launch( vars, target ) {
+						var query = '';
+						var new_tab = false;
+
+						for(var key in vars) {
+							if(query.length == 0) {
+								query += '?' + key + '=' + encodeURIComponent(vars[key]);
+							}
+							else {
+								query += '&' + key + '=' + encodeURIComponent(vars[key]);
+							}
+						}
+
+						var url = '/d2l/customization/pearsonlti/157344/Launch' + query;(target == '_blank') ? window.open( url, '_blank' ) : location.replace( url );}</script><script src="./embeds.js.download" type="module"></script><script>document.addEventListener('DOMContentLoaded', function() {
+					window.D2L.EmbedRenderer.renderEmbeds(document.body);
+				});</script><script src="./mathjax.js.download" type="module"></script><script>document.addEventListener('DOMContentLoaded', function() {
+						if (document.querySelector('math') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
+							document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
+								elm.setAttribute('style', 'display: block; height: 0.5rem;');
+							});
+
+							window.D2L.MathJax.loadMathJax({
+								outputScale: 1.5,
+								renderLatex: false,
+								enableMML3Support: false
+							});
+						}
+					});</script><script src="./prism.js.download" type="module"></script><script>document.addEventListener('DOMContentLoaded', function() {
+					document.querySelectorAll('.d2l-code').forEach(code => {
+						window.D2L.Prism.formatCodeElement(code);
+					});
+				});</script><script src="./creator.js.download" type="module"></script><script>document.addEventListener('DOMContentLoaded', async () => {
+					const activities = [];
+					const practices = [];
+					const allPractices = document.querySelectorAll('.d2l-practice');
+					const elements = document.querySelectorAll('.d2l-element');
+					let layouts = [...document.querySelectorAll('.d2l-cplus-layout')];
+					const tables = document.querySelectorAll('table');
+					const contentStylerStyleLinks = document.querySelectorAll('head > link[href="https://templates.lcs.brightspace.com/lib/assets/css/styles.min.css"]');
+					const contentStylerOverides = document.querySelectorAll('head > link[href^="/d2l/le/contentstyler/"][data-override="override"]');
+
+					layouts = layouts.filter((layout) => layout.closest('.d2l-element.mceNonEditable') === null);
+
+					for (const practice of allPractices) {
+						const activityContainer = practice.hasAttribute('data-d2l-activity-href');
+						if (activityContainer) {
+							activities.push(practice);
+						}
+						else {
+							practices.push(practice);
+						}
+					}
+
+					if (layouts.length > 0) {
+						window.D2L.Creator.convertLayouts(layouts);
+					}
+					if (elements.length > 0) {
+						window.D2L.Creator.convertElements(elements, 157344, '/content/enforced/157344-21296.202521/', 'True');
+					}
+					if (activities.length > 0) {
+						window.D2L.Creator.convertPracticeActivities(activities, 157344, '/content/enforced/157344-21296.202521/');
+					}
+					if (practices.length > 0) {
+						window.D2L.Creator.convertPractices(practices, 157344, '/content/enforced/157344-21296.202521/');
+					}
+					if (contentStylerStyleLinks.length > 0 && contentStylerOverides.length > 0 && tables.length > 0) {
+						window.D2L.Creator.wrapTables(tables);
+					}
+				});</script><script>window.addEventListener('message', function(event) { 
+					if( !event.data ) {
+						return;
+					}
+
+					let params;
+					try {
+						params = JSON.parse( event.data );
+					}
+					catch {
+						return;
+					}
+					if( !params.subject || params.subject !== 'lti.frameResize' ) {
+						return;
+					}
+
+					const MAX_FRAME_HEIGHT = 10000;
+					if( !params.height || params.height < 1 || params.height > MAX_FRAME_HEIGHT ) {
+						console.warn( 'Invalid height value received, aborting' );
+						return;
+					}
+					const el = document.getElementsByTagName( 'iframe' );
+					for ( let i=0; i < el.length; i++ ) {
+						if( el[i].contentWindow === event.source ) {
+							el[i].style.height = params.height + 'px';
+
+							console.info( 'Setting iFrame height to ' + params.height );
+
+							if( el[i].getAttribute('lockwidth') !== 'true'){
+								el[i].style.width = '100%';
+								console.info( 'Setting iFrame width to 100%' );
+							}
+						}
+					}
+				});</script><style id="d2l-colors">
+		html {
+			/* basic grays (lightest to darkest) */
+			--d2l-color-regolith: #f9fbff;
+			--d2l-color-sylvite: #f1f5fb;
+			--d2l-color-gypsum: #e3e9f1;
+			--d2l-color-mica: #cdd5dc;
+			--d2l-color-corundum: #b1b9be;
+			--d2l-color-chromite: #90989d;
+			--d2l-color-galena: #6e7477;
+			--d2l-color-tungsten: #494c4e;
+			--d2l-color-ferrite: #202122;
+
+			/* zircon */
+			--d2l-color-zircon-plus-2: #e0feff;
+			--d2l-color-zircon-plus-1: #00d2ed;
+			--d2l-color-zircon: #008eab;
+			--d2l-color-zircon-minus-1: #035670;
+
+			/* celestine */
+			--d2l-color-celestine-plus-2: #e8f8ff;
+			--d2l-color-celestine-plus-1: #29a6ff;
+			--d2l-color-celestine: #006fbf;
+			--d2l-color-celestine-minus-1: #004489;
+
+			/* amethyst */
+			--d2l-color-amethyst-plus-2: #f2f0ff;
+			--d2l-color-amethyst-plus-1: #8982ff;
+			--d2l-color-amethyst: #6038ff;
+			--d2l-color-amethyst-minus-1: #4500db;
+
+			/* fluorite */
+			--d2l-color-fluorite-plus-2: #f9ebff;
+			--d2l-color-fluorite-plus-1: #ce68fa;
+			--d2l-color-fluorite: #9d1fd4;
+			--d2l-color-fluorite-minus-1: #6900a0;
+
+			/* tourmaline */
+			--d2l-color-tourmaline-plus-2: #ffebf6;
+			--d2l-color-tourmaline-plus-1: #fd4e9d;
+			--d2l-color-tourmaline: #d40067;
+			--d2l-color-tourmaline-minus-1: #990056;
+
+			/* cinnabar */
+			--d2l-color-cinnabar-plus-2: #ffede8;
+			--d2l-color-cinnabar-plus-1: #ff575a;
+			--d2l-color-cinnabar: #cd2026;
+			--d2l-color-cinnabar-minus-1: #990006;
+
+			/* carnelian */
+			--d2l-color-carnelian-plus-1: #fff3e0;
+			--d2l-color-carnelian: #e87511;
+			--d2l-color-carnelian-minus-1: #ba4700;
+			--d2l-color-carnelian-minus-2: #7d2600;
+
+			/* citrine */
+			--d2l-color-citrine-plus-1: #fff9d6;
+			--d2l-color-citrine: #ffba59;
+			--d2l-color-citrine-minus-1: #c47400;
+			--d2l-color-citrine-minus-2: #7a4300;
+
+			/* peridot */
+			--d2l-color-peridot-plus-1: #efffd9;
+			--d2l-color-peridot: #8ad934;
+			--d2l-color-peridot-minus-1: #4a8f00;
+			--d2l-color-peridot-minus-2: #2f5e00;
+
+			/* olivine */
+			--d2l-color-olivine-plus-1: #e7ffe3;
+			--d2l-color-olivine: #46a661;
+			--d2l-color-olivine-minus-1: #027a21;
+			--d2l-color-olivine-minus-2: #005614;
+
+			/* malachite */
+			--d2l-color-malachite-plus-1: #e3fff5;
+			--d2l-color-malachite: #2de2c0;
+			--d2l-color-malachite-minus-1: #00a490;
+			--d2l-color-malachite-minus-2: #00635e;
+
+			/* primary accent */
+			--d2l-color-primary-accent-action: var(--d2l-color-celestine);
+			--d2l-color-primary-accent-indicator: var(--d2l-color-carnelian);
+
+			/* feedback */
+			--d2l-color-feedback-error: var(--d2l-color-cinnabar);
+			--d2l-color-feedback-warning: var(--d2l-color-carnelian);
+			--d2l-color-feedback-success: var(--d2l-color-olivine);
+			--d2l-color-feedback-action: var(--d2l-color-celestine);
+		}
+	</style><style id="d2l-typography-font-face">
+		* {
+			--d2l-document-direction: ltr;
+		}
+
+		html[dir="rtl"] * {
+			--d2l-document-direction: rtl;
+		}
+
+		
+	@font-face {
+		font-family: 'Lato';
+		font-style: normal;
+		font-weight: 400;
+		src: local('Lato Regular'), local('Lato-Regular'), url(https://s.brightspace.com/lib/fonts/0.6.1/assets/Lato-400.woff2) format('woff2'), url(https://s.brightspace.com/lib/fonts/0.6.1/assets/Lato-400.woff) format('woff'), url(https://s.brightspace.com/lib/fonts/0.6.1/assets/Lato-400.ttf) format('truetype');
+	}
+	@font-face {
+		font-family: 'Lato';
+		font-style: normal;
+		font-weight: 700;
+		src: local('Lato Bold'), local('Lato-Bold'), url(https://s.brightspace.com/lib/fonts/0.6.1/assets/Lato-700.woff2) format('woff2'), url(https://s.brightspace.com/lib/fonts/0.6.1/assets/Lato-700.woff) format('woff'), url(https://s.brightspace.com/lib/fonts/0.6.1/assets/Lato-700.ttf) format('truetype');
+	}
+	@font-face {
+		font-family: 'BC Sans';
+		font-style: normal;
+		font-weight: 300;
+		src: url(https://s.brightspace.com/lib/fonts/0.6.1/assets/BCSans-Light.woff2) format('woff2'), url(https://s.brightspace.com/lib/fonts/0.6.1/assets/BCSans-Light.woff) format('woff');
+	}
+	@font-face {
+		font-family: 'BC Sans';
+		font-style: normal;
+		font-weight: 400;
+		src: url(https://s.brightspace.com/lib/fonts/0.6.1/assets/BCSans-Regular.woff2) format('woff2'), url(https://s.brightspace.com/lib/fonts/0.6.1/assets/BCSans-Regular.woff) format('woff');
+	}
+	@font-face {
+		font-family: 'BC Sans';
+		font-style: normal;
+		font-weight: 700;
+		src: url(https://s.brightspace.com/lib/fonts/0.6.1/assets/BCSans-Bold.woff2) format('woff2'), url(https://s.brightspace.com/lib/fonts/0.6.1/assets/BCSans-Bold.woff) format('woff');
+	}
+	@font-face {
+		font-family: 'BC Sans';
+		font-style: italic;
+		font-weight: 300;
+		src: url(https://s.brightspace.com/lib/fonts/0.6.1/assets/BCSans-LightItalic.woff2) format('woff2'), url(https://s.brightspace.com/lib/fonts/0.6.1/assets/BCSans-LightItalic.woff) format('woff');
+	}
+	@font-face {
+		font-family: 'BC Sans';
+		font-style: italic;
+		font-weight: 400;
+		src: url(https://s.brightspace.com/lib/fonts/0.6.1/assets/BCSans-Italic.woff2) format('woff2'), url(https://s.brightspace.com/lib/fonts/0.6.1/assets/BCSans-Italic.woff) format('woff');
+	}
+	@font-face {
+		font-family: 'BC Sans';
+		font-style: italic;
+		font-weight: 700;
+		src: url(https://s.brightspace.com/lib/fonts/0.6.1/assets/BCSans-BoldItalic.woff2) format('woff2'), url(https://s.brightspace.com/lib/fonts/0.6.1/assets/BCSans-BoldItalic.woff) format('woff');
+	}
+
+
+		.d2l-typography {
+			color: var(--d2l-color-ferrite);
+			display: block;
+			font-family: 'Lato', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+			letter-spacing: 0.01rem;
+			font-size: 0.95rem;
+			font-weight: 400;
+			line-height: 1.4rem;
+		}
+
+		.d2l-typography .d2l-body-standard {
+			font-size: 0.95rem;
+			font-weight: 400;
+			line-height: 1.4rem;
+		}
+
+		.d2l-typography .d2l-body-compact {
+			font-size: 0.8rem;
+			font-weight: 400;
+			line-height: 1.2rem;
+		}
+
+		.d2l-typography .d2l-body-small {
+			color: var(--d2l-color-tungsten);
+			font-size: 0.7rem;
+			font-weight: 400;
+			line-height: 1rem;
+			margin: auto;
+		}
+
+		.d2l-typography .d2l-label-text {
+			font-size: 0.7rem;
+			line-height: 1rem;
+			font-weight: 700;
+			letter-spacing: 0.2px;
+		}
+
+		.d2l-typography p {
+			margin: 1rem 0;
+		}
+
+		.d2l-typography:lang(ar),
+		.d2l-typography :lang(ar) {
+			font-family: 'Segoe UI', 'Geeza Pro', sans-serif;
+		}
+
+		.d2l-typography:lang(zh),
+		.d2l-typography :lang(zh) {
+			font-family: 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif;
+		}
+
+		.d2l-typography:lang(ko),
+		.d2l-typography :lang(ko) {
+			font-family: 'Apple SD Gothic Neo', Dotum, sans-serif;
+		}
+
+		.d2l-typography:lang(ja),
+		.d2l-typography :lang(ja) {
+			font-family: 'Hiragino Kaku Gothic Pro', 'Meiyro', sans-serif;
+		}
+
+		.d2l-typography .d2l-heading-1 {
+			font-size: 2rem;
+			font-weight: 400;
+			line-height: 2.4rem;
+			margin: 1.5rem 0 1.5rem 0;
+		}
+
+		.d2l-typography .d2l-heading-2 {
+			font-size: 1.5rem;
+			font-weight: 400;
+			line-height: 1.8rem;
+			margin: 1.5rem 0 1.5rem 0;
+		}
+
+		.d2l-typography .d2l-heading-3 {
+			font-size: 1rem;
+			font-weight: 700;
+			line-height: 1.5rem;
+			margin: 1.5rem 0 1.5rem 0;
+		}
+
+		.d2l-typography .d2l-heading-4 {
+			font-size: 0.8rem;
+			font-weight: 700;
+			line-height: 1.2rem;
+			margin: 1.5rem 0 1.5rem 0;
+		}
+
+		.d2l-typography .d2l-blockquote {
+			font-size: 0.8rem;
+			font-weight: 400;
+			line-height: 1.4rem;
+			margin: 0;
+			margin-right: 1.2rem;
+			padding: 0;
+			padding-left: 1.2rem;
+			padding-top: 0.5rem;
+			position: relative;
+		}
+
+		.d2l-typography .d2l-blockquote::before {
+			position: absolute;
+			content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAyMiAyMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGRlZnM+PHBhdGggaWQ9ImEiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L2RlZnM+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEgLTEpIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxtYXNrIGlkPSJiIiBmaWxsPSIjZmZmIj48dXNlIHhsaW5rOmhyZWY9IiNhIi8+PC9tYXNrPjxwYXRoIGQ9Ik02IDIyLjY2N0E0LjY2NyA0LjY2NyAwIDAgMCAxMC42NjcgMThjMC0xLjIyNy0uNTU5LTIuNS0xLjMzNC0zLjMzM0M4LjQ4MSAxMy43NSA3LjM1IDEzLjMzMyA2IDEzLjMzM2MtLjQxMSAwIDEuMzMzLTYuNjY2IDMtOSAxLjY2Ny0yLjMzMyAxLjMzMy0zIC4zMzMtM0M4IDEuMzMzIDUuMjUzIDQuNTg2IDQgNy4yNTUgMS43NzMgMTIgMS4zMzMgMTUuMzkyIDEuMzMzIDE4QTQuNjY3IDQuNjY3IDAgMCAwIDYgMjIuNjY3em0xMiAwQTQuNjY3IDQuNjY3IDAgMCAwIDIyLjY2NyAxOGMwLTEuMjI3LS41NTktMi41LTEuMzM0LTMuMzMzLS44NTItLjkxNy0xLjk4My0xLjMzNC0zLjMzMy0xLjMzNC0uNDExIDAgMS4zMzMtNi42NjYgMy05IDEuNjY3LTIuMzMzIDEuMzMzLTMgLjMzMy0zLTEuMzMzIDAtNC4wOCAzLjI1My01LjMzMyA1LjkyMkMxMy43NzMgMTIgMTMuMzMzIDE1LjM5MiAxMy4zMzMgMThBNC42NjcgNC42NjcgMCAwIDAgMTggMjIuNjY3eiIgZmlsbD0iI0QzRDlFMyIgbWFzaz0idXJsKCNiKSIvPjwvZz48L3N2Zz4=");
+			top: 0;
+			left: 0;
+		}
+
+		[dir="rtl"] .d2l-typography .d2l-blockquote,
+		.d2l-typography .d2l-blockquote[dir="rtl"] {
+			margin-left: 1.2rem;
+			margin-right: 0;
+			padding-left: 0;
+			padding-right: 1.2rem;
+		}
+
+		[dir="rtl"] .d2l-typography .d2l-blockquote::before,
+		.d2l-typography .d2l-blockquote[dir="rtl"]::before {
+			left: initial;
+			right: 0;
+			transform: scaleX(-1);
+		}
+
+		@media (max-width: 615px) {
+
+			.d2l-typography .d2l-body-standard {
+				font-size: 0.8rem;
+				line-height: 1.2rem;
+			}
+
+			.d2l-typography .d2l-body-small {
+				font-size: 0.6rem;
+				line-height: 0.9rem;
+			}
+
+			.d2l-typography .d2l-heading-1 {
+				font-size: 1.5rem;
+				line-height: 1.8rem;
+			}
+
+			.d2l-typography .d2l-heading-2 {
+				font-size: 1rem;
+				font-weight: 700;
+				line-height: 1.5rem;
+			}
+
+			.d2l-typography .d2l-heading-3 {
+				font-size: 0.8rem;
+				line-height: 1.2rem;
+			}
+
+			.d2l-typography .d2l-blockquote {
+				line-height: 1.2rem;
+			}
+
+		}
+	</style></head><body class="content layout-2" role="document" style="overflow-y: hidden;"><div class="container-fluid"><main>
+<div class="row">
+<div class="col-xs-12 col-sm-offset-2 col-sm-8">
+<h1>All About Standard Web Graphics</h1>
+<p>Can you imagine navigating the World Wide Web without graphics?&nbsp;</p>
+<p><img src="./lynxBrowser.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;"></p>
+<p>The first browsers had no support for graphics as the web was text-based only. Browsers didn't support graphics until 1993. <a href="https://thenetstorian.com/2016/04/15/web-browser-history-part-1-the-evolution-of-the-web-browser/" target="_blank" rel="noopener">Click here to read a little about browser history!&nbsp; <span class="sr-only">opens in new window</span><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></p>
+<h2>Commonly Used Graphic File Formats</h2>
+<p dir="ltr" id="_kOMTGbdO81g6TZ">Graphic types commonly used on web pages include:&nbsp;</p>
+<ul class="icon-list-check">
+<li><a href="https://ccbcmd.brightspace.com/content/enforced/157344-21296.202521/Module%2004/04.%20All%20About%20Web%20Graphics.html?ou=157344&amp;d2l_body_type=3#gif">GIF</a></li>
+<li><a href="https://ccbcmd.brightspace.com/content/enforced/157344-21296.202521/Module%2004/04.%20All%20About%20Web%20Graphics.html?ou=157344&amp;d2l_body_type=3#jpg">JPG</a></li>
+<li><a href="https://ccbcmd.brightspace.com/content/enforced/157344-21296.202521/Module%2004/04.%20All%20About%20Web%20Graphics.html?ou=157344&amp;d2l_body_type=3#png">PNG</a></li>
+<li><a href="https://ccbcmd.brightspace.com/content/enforced/157344-21296.202521/Module%2004/04.%20All%20About%20Web%20Graphics.html?ou=157344&amp;d2l_body_type=3#webp">WebP</a></li>
+<li><a href="https://ccbcmd.brightspace.com/content/enforced/157344-21296.202521/Module%2004/04.%20All%20About%20Web%20Graphics.html?ou=157344&amp;d2l_body_type=3#svg">SVG</a></li>
+</ul>
+<ul style="list-style-type: none;" dir="ltr" id="_zj7TYfplSQhYxp"></ul>
+<hr>
+<h3 id="gif">GIF</h3>
+<p>GIF stands for Graphics Interchange Format. The animated GIF has made and kept this format popular, but its format can be used for still graphics as well. Some GIF facts:&nbsp;</p>
+<ul class="icon-list-check">
+<li dir="ltr" id="_Ij3CK1BKRxTOXw">Best used for line art and logos</li>
+<li dir="ltr" id="_FIZnaBSze0kKI_">Maximum of 256 colors</li>
+<li dir="ltr" id="_A2Vrsir0tWYCJs">One color can be configured as transparent</li>
+<li dir="ltr" id="_supCPG710HBBhU">Can be animated</li>
+<li dir="ltr" id="_09ZNz3hMMcWl-K">Uses lossless compression (data compression that reduces file sizes without sacrificing any significant information in the process)</li>
+<li dir="ltr" id="_TIcbp22sIaaSSa">Can be <strong>interlaced </strong>(Displays low-resolution versions of the image in a browser as the file downloads. Interlacing makes download time seem shorter but also increases the file size.)</li>
+</ul>
+<ul style="list-style-type: none;" dir="ltr" id="_zj7TYfplSQhYxp"></ul>
+<p><img src="./03max-monster.gif" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></p>
+<p><small>Image from <a href="https://www.eminentseo.com/blog/gif-images-clever-tools-marketing/" target="_blank" rel="noopener">https://www.eminentseo.com/blog/gif-images-clever-tools-marketing/ <span class="sr-only">opens in new window</span><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></small></p>
+<p>(Right-click on the image above and save it in your class folder in a subfolder called mod03)</p>
+<hr>
+<h3 id="jpg">JPG</h3>
+<p>JPG stands for Joint Photographic Experts Group and is one of the most common formats for photographs. Some JPG facts include:&nbsp;</p>
+<ul class="icon-list-check">
+<li dir="ltr" id="_o8-CxJx2CfAjA5">Best used for photographs</li>
+<li dir="ltr" id="_eVDBD80aHg2lZB">Up to 16.7 million colors</li>
+<li dir="ltr" id="_gAu7CFDyw11Dd-">Use lossy compression (used when a file can afford to lose some data or if storage space needs to be considered.)</li>
+<li dir="ltr" id="_tWDCIQbsg93eD1">Cannot be animated</li>
+<li dir="ltr" id="_jm0_VpuabfNO4p">Cannot be made transparent</li>
+<li dir="ltr" id="_hUYM-iHGoVbL5b">Progressive JPEG – similar to interlaced display</li>
+</ul>
+<p><img src="./03jpegExample.png" alt="image showing the compression levels of a Jpg image. One one end there is good quality but as the image gets more compressed the quality diminishes. " title="image showing the compression levels of a Jpg image. One one end there is good quality but as the image gets more compressed the quality diminishes. " data-d2l-editor-default-img-style="true" style="max-width: 100%;"></p>
+<hr>
+<p><small>Image from <a href="https://www.mathworks.com/help/images/jpeg-image-deblocking-using-deep-learning.html" target="_blank" rel="noopener">https://www.mathworks.com/help/images/jpeg-image-deblocking-using-deep-learning.html <span class="sr-only">opens in new window</span><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></small></p>
+<p>(Right-click on the image above and save it in your class folder in a subfolder called mod03)</p>
+<hr>
+<h3 id="png">PNG</h3>
+<p><img src="./03colors.png" alt="" title="" data-d2l-editor-default-img-style="true" style="float: right;" https:="" www.fnordware.com="" superpng="" samples.html"=""></p>
+<p>PNG stands for Portable Network Graphic. Some PNG facts include:&nbsp;</p>
+<ul class="icon-list-check">
+<li dir="ltr" id="_DeOudwe76MrcPi">Supports millions of colors</li>
+<li dir="ltr" id="_vfceV5hoUQsvw3">Supports multiple levels of transparency&nbsp;</li>
+<li dir="ltr" id="_oEs7xRtb7wjifM">Supports interlacing</li>
+<li dir="ltr" id="_k8uVsYCtEyO4vH">Uses lossless compression</li>
+<li dir="ltr" id="_ybOVOnuu6bLnJN">Combines the best of GIF &amp; JPEG</li>
+<li dir="ltr" id="_vEDCbfIIPkbELg">Well-supported by modern browsers</li>
+</ul>
+<p><small>Image from <a href="https://www.fnordware.com/superpng/samples.html" target="_blank" rel="noopener">https://www.fnordware.com/superpng/samples.html <span class="sr-only">opens in new window</span><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a>&nbsp;&nbsp;</small></p>
+<p>(Right-click on the image above and save it in your class folder in a subfolder called mod03)</p>
+<hr>
+<h3 id="webp">WebP</h3>
+<p>WebP is a modern image format that provides superior lossless and lossy compression for images on the web. Using WebP, webmasters and web developers can create smaller, richer images that make the web faster. <a href="https://developers.google.com/speed/webp/" target="_blank" rel="noopener">Learn more here! <span class="sr-only">opens in new window</span><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></p>
+<p>WebP Facts include:&nbsp;</p>
+<ul class="icon-list-check">
+<li dir="ltr" id="_u9IFkclXF1oDDc">Supports millions of colors</li>
+<li dir="ltr" id="_Bv89voON4URuK-">Supports transparency</li>
+<li dir="ltr" id="_vaqys7Q3QqTvBd">Uses both lossy and lossless compression</li>
+<li dir="ltr" id="_rsFHzMxM8dKey_">Intended to provide improved compression for GIF and JPG images</li>
+<li dir="ltr" id="_EdoYoEHPgsvhhM">Browser support is growing</li>
+</ul>
+<p><img src="./1.webp" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;"></p>
+<p><small>Image from <a href="https://developers.google.com/speed/webp/gallery1" target="_blank" rel="noopener">https://developers.google.com/speed/webp/gallery1 <span class="sr-only">opens in new window</span><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></small></p>
+<p>(Right-click on the image above and save it in your class folder in a subfolder called mod03)</p>
+<hr>
+<h3 id="svg">SVG</h3>
+<p>An SVG file, short for <strong>s</strong>calable <strong>v</strong>ector <strong>g</strong>raphic file, is a standard graphics file type used for rendering two-dimensional images online. SVGs are a bit of a magic trick in web development. They generate clean, crisp graphics at any scale and are optimized for search engines. SVG files are really images at all. They do not contain pixels of images. They are programmable and capable of dynamic animations. SVG Facts include:&nbsp;</p>
+<ul class="icon-list-check">
+<li dir="ltr" id="_18icE8Eo4TbOGd">Vector image format, ideal for user interface elements, icons, diagrams, etc.,</li>
+<li dir="ltr" id="_svlOBFslFEb2y3">can be drawn accurately at different sizes.</li>
+<li dir="ltr" id="_NGELU2mvXNXzbx">Tiny!</li>
+</ul>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-52 -53 100 100" stroke-width="2"> <g fill="none"> <ellipse stroke="#66899a" rx="6" ry="44"></ellipse> <ellipse stroke="#e1d85d" rx="6" ry="44" transform="rotate(-66)"></ellipse> <ellipse stroke="#80a3cf" rx="6" ry="44" transform="rotate(66)"></ellipse> <circle stroke="#4b541f" r="44"></circle> </g> <g fill="#66899a" stroke="white"> <circle fill="#80a3cf" r="13"></circle> <circle cy="-44" r="9"></circle> <circle cx="-40" cy="18" r="9"></circle> <circle cx="40" cy="18" r="9"></circle> </g> </svg>
+<p><small>Image (code) from: <a href="https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/atom.svg" target="_blank" rel="noopener">https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/atom.svg <span class="sr-only">opens in new window</span><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></small></p>
+<h2>Adding Images HTML Pages</h2>
+<p>Remember, HTML Is just a text file that contains marked-up content. It can't contain an image file like PowerPoint or Word document. It can, however, include an image via the image tag.&nbsp;</p>
+<p dir="ltr" id="_CG-8XLtUT2kxqy"><code>&lt;img src="dog.jpg" alt="Dog at computer" height="100" width="100"&gt;</code></p>
+<p><strong>src&nbsp; = </strong>File name AND LOCATION of the graphic<br><strong>alt </strong>= Configures alternate text description - Required for Accessibility. Use "decorative" if the graphic is not part of your content.<br><strong>height- </strong>Height of the graphic in pixels<br><strong>width - </strong>Width of the graphic in pixels&nbsp;</p>
+<h2>Graphic Considerations</h2>
+<p>Graphics should always be optimized. What is the smaller file size I can use without losing quality? Dimensions should be reduced of the image to the actual width and height of the image on the web page.&nbsp;</p>
+<h3>Editing Images?&nbsp;</h3>
+<p>Photoshop is a standard image application. However, there are lots of free options now!&nbsp;</p>
+<ul class="icon-list-check">
+<li dir="ltr" id="_rWPHMBR1f73v3s">GIMP - &nbsp;<a href="https://www.gimp.org/" target="_blank" rel="noopener">https://www.gimp.org/ <span class="sr-only">opens in new window</span><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a> (FREE!) Installable open-source software.&nbsp;</li>
+<li dir="ltr" id="_svlOBFslFEb2y3">Pixlr - <a href="https://pixlr.com/x/" target="_blank" rel="noopener">https://pixlr.com/x/ <span class="sr-only">opens in new window</span><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a> &nbsp;(FREE!) Online Web app.</li>
+</ul>
+<h3>Image Naming Best Practices</h3>
+<ul class="icon-list-check">
+<li dir="ltr" id="_rWPHMBR1f73v3s">Use all lowercase letters&nbsp;</li>
+<li dir="ltr" id="_svlOBFslFEb2y3">Do not use punctuation symbols and spaces</li>
+<li dir="ltr">Do not change the file extensions&nbsp; (should be .gif, .jpg, .jpeg, or .png)</li>
+<li dir="ltr">Keep your file names short but descriptive
+<ul class="icon-list-check" style="margin-top: 15px;">
+<li><strong>db.gif</strong> is probably too short</li>
+<li><strong>myimagewithmydogonmybirthday.gif</strong> is too long</li>
+<li><strong>dogbday.gif </strong>may be just about right</li>
+</ul>
+</li>
+</ul>
+<h3>Relative vs Universal Images? (local vs. remote)</h3>
+<p><code>&lt;img src="dog.jpg" alt="Dog at computer" height="100" width="100"&gt;</code></p>
+<p>vs.</p>
+<p><code>&lt;img src="https://hips.hearstapps.com/hmg-prod/images/shih-tzu-little-dog-royalty-free-image-1652927214.jpg" alt="Dog at computer" height="100" width="100"&gt;</code></p>
+<d2l-cplus-click-to-reveal data-wrapper-data="{&quot;dataIdx&quot;:&quot;2&quot;,&quot;dataType&quot;:&quot;noicon&quot;,&quot;role&quot;:null,&quot;ariaDescribedby&quot;:&quot;d2l-uid-347&quot;,&quot;srOnlyInnerText&quot;:&quot;Click and Reveal&quot;}" data-id="0" data-type="noicon" data-button-reveal-label="Learn More" data-button-hide-label="Learn More" data-intro-text="What&#39;s the difference between the two image tags above?" data-instructions="Try to articulate the difference to yourself before learning more. Select to learn more." data-revealed-content="&quot;\n&lt;p&gt;&lt;code&gt;&amp;lt;img src=\&quot;dog.jpg\&quot; alt=\&quot;Dog at computer\&quot; height=\&quot;100\&quot; width=\&quot;100\&quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;\n&lt;p&gt;The above references a relative image in relation to the page it&#39;s included on. For example, if this code was found on a page called index.html, then &lt;code&gt;dog.jpg&lt;/code&gt; would need to be in the same folder to be displayed.&amp;nbsp;&amp;nbsp;&lt;/p&gt;\n&lt;p&gt;&lt;code&gt;&amp;lt;img src=\&quot;https://hips.hearstapps.com/hmg-prod/images/shih-tzu-little-dog-royalty-free-image-1652927214.jpg\&quot; alt=\&quot;Dog at computer\&quot; height=\&quot;100\&quot; width=\&quot;100\&quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;\n&lt;p&gt;The above references a universal image in relation to the page it&#39;s included on. For example, if code was found on a page called index.html, then &lt;code&gt;shih-tzu-little-dog-royalty-free-image-1652927214.jpg&lt;/code&gt; It would be accessed over the internet, and the image will appear as long as it still exists in that location.&amp;nbsp;&lt;/p&gt;\n&quot;" data-rs-shadow-root="true" style="display: block;" type="noicon"><template shadowrootmode="open"><!---->
+			<div class="d2l-element mceNonEditable" data-idx="" data-type="" role="" aria-describedby="">
+				<div class="sr-only" id=""><!--?lit$930384425$--></div>
+				<!--?lit$930384425$-->
+				<div class="d2l-cplus-click-to-reveal-container">
+					<!--?lit$930384425$-->
+					<div class="d2l-cplus-click-to-reveal-content-container">
+						<p class="d2l-cplus-click-to-reveal-intro">
+							<!--?lit$930384425$-->What's the difference between the two image tags above?
+						</p>
+						<p class="d2l-cplus-click-to-reveal-instructions d2l-cplus-instructions">
+							<!--?lit$930384425$-->Try to articulate the difference to yourself before learning more. Select to learn more.
+						</p>
+						<d2l-cplus-button primary="" line-wrap="" aria-live="polite" aria-expanded="false" type="button"><template shadowrootmode="open"><!---->
+			<button class="d2l-label-text" aria-expanded="false" id="d2l-uid-1" type="button">
+				<slot></slot>
+			</button>
+			<!--?lit$930384425$-->
+			<!--?lit$930384425$-->
+		</template>
+							<!--?lit$930384425$-->Learn More
+						</d2l-cplus-button>
+						<d2l-expand-collapse-content><template shadowrootmode="open"><!---->
+			<div class="d2l-expand-collapse-content-container" data-state="collapsed" style="height:0;">
+				<div class="d2l-expand-collapse-content-inner">
+					<slot></slot>
+				</div>
+			</div>
+		</template>
+							<div class="d2l-cplus-revealed-content-container">
+								<d2l-cplus-html-block data-rs-shadow-root="true" has-keyboard-focus="" html="
+&lt;p&gt;&lt;code&gt;&amp;lt;img src=&quot;dog.jpg&quot; alt=&quot;Dog at computer&quot; height=&quot;100&quot; width=&quot;100&quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The above references a relative image in relation to the page it&#39;s included on. For example, if this code was found on a page called index.html, then &lt;code&gt;dog.jpg&lt;/code&gt; would need to be in the same folder to be displayed.&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;img src=&quot;https://hips.hearstapps.com/hmg-prod/images/shih-tzu-little-dog-royalty-free-image-1652927214.jpg&quot; alt=&quot;Dog at computer&quot; height=&quot;100&quot; width=&quot;100&quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The above references a universal image in relation to the page it&#39;s included on. For example, if code was found on a page called index.html, then &lt;code&gt;shih-tzu-little-dog-royalty-free-image-1652927214.jpg&lt;/code&gt; It would be accessed over the internet, and the image will appear as long as it still exists in that location.&amp;nbsp;&lt;/p&gt;
+"><template shadowrootmode="open"><!---->
+            <d2l-html-block tabindex="0" html="&lt;style&gt;.d2l-element,.d2l-cplus-layout{font-family:Lato,&quot;Lucida Sans Unicode&quot;,&quot;Lucida Grande&quot;,sans-serif !important;line-height:1.5}.d2l-element *,.d2l-cplus-layout *{box-sizing:border-box}.d2l-element{container-name:d2l-cplus-element;container-type:inline-size;margin-inline:auto auto}.d2l-element .sr-only{border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px}:host .d2l-cplus-html-container{letter-spacing:.2px;line-height:1.5}:host .d2l-cplus-html-container h1,:host .d2l-cplus-html-container .h1,:host .d2l-cplus-html-container h2,:host .d2l-cplus-html-container .h2,:host .d2l-cplus-html-container h3,:host .d2l-cplus-html-container .h3,:host .d2l-cplus-html-container h4,:host .d2l-cplus-html-container .h4,:host .d2l-cplus-html-container h5,:host .d2l-cplus-html-container .h5,:host .d2l-cplus-html-container h6,:host .d2l-cplus-html-container .h6{color:var(--neutral-one-head, var(--d2l-cplus-color-neutral-one-head, var(--d2l-cplus-color-grey-dark-4, #494c4e)));font-family:var(--d2l-cplus-font-family-one) !important;font-weight:500;padding:0}:host .d2l-cplus-html-container h1,:host .d2l-cplus-html-container .h1{font-size:40px;font-weight:400;line-height:48px;margin-block:var(--d2l-cplus-size-small-1, 12px) var(--d2l-cplus-size-large-10, 78px)}@media screen and (width &lt;= 768px){:host .d2l-cplus-html-container h1,:host .d2l-cplus-html-container .h1{font-size:40px;line-height:40px}}@media screen and (width &lt;= 400px){:host .d2l-cplus-html-container h1,:host .d2l-cplus-html-container .h1{font-size:30px;line-height:30px}}:host .d2l-cplus-html-container h1::after,:host .d2l-cplus-html-container .h1::after{background-color:var(--primary, var(--d2l-cplus-color-primary, var(--d2l-cplus-color-blue-base, #008eab)));border:3px solid var(--primary, var(--d2l-cplus-color-primary, var(--d2l-cplus-color-blue-base, #008eab)));content:&quot; &quot;;display:block;margin-block:var(--d2l-cplus-size-small-1, 12px) var(--d2l-cplus-size-large-2, 30px);max-width:95px}:host .d2l-cplus-html-container h2,:host .d2l-cplus-html-container .h2{font-size:30px;font-weight:400;line-height:36px;margin-block:var(--d2l-cplus-size-small-1, 12px)}@media screen and (width &lt;= 768px){:host .d2l-cplus-html-container h2,:host .d2l-cplus-html-container .h2{font-size:var(--d2l-cplus-font-size-medium, 20px);line-height:40px}}@media screen and (width &lt;= 400px){:host .d2l-cplus-html-container h2,:host .d2l-cplus-html-container .h2{font-size:var(--d2l-cplus-font-size-medium, 20px);line-height:32px}}:host .d2l-cplus-html-container h3,:host .d2l-cplus-html-container .h3{font-size:var(--d2l-cplus-font-size-medium, 20px);font-weight:bold;line-height:30px;margin-block:var(--d2l-cplus-size-small-2, 6px)}@media screen and (width &lt;= 768px){:host .d2l-cplus-html-container h3,:host .d2l-cplus-html-container .h3{font-size:var(--d2l-cplus-font-size-small, 16px);line-height:32px}}@media screen and (width &lt;= 400px){:host .d2l-cplus-html-container h3,:host .d2l-cplus-html-container .h3{font-size:var(--d2l-cplus-font-size-small, 16px);line-height:32px}}:host .d2l-cplus-html-container h4,:host .d2l-cplus-html-container .h4{font-size:var(--d2l-cplus-font-size-medium, 20px);font-weight:500;line-height:30px;margin-block:var(--d2l-cplus-size-small-2, 6px);text-transform:uppercase}@media screen and (width &lt;= 768px){:host .d2l-cplus-html-container h4,:host .d2l-cplus-html-container .h4{font-size:var(--d2l-cplus-font-size-small, 16px);line-height:32px}}@media screen and (width &lt;= 400px){:host .d2l-cplus-html-container h4,:host .d2l-cplus-html-container .h4{font-size:var(--d2l-cplus-font-size-small, 16px);line-height:32px}}:host .d2l-cplus-html-container h5,:host .d2l-cplus-html-container .h5{color:var(--neutral-one-head, var(--d2l-cplus-color-neutral-one-head, var(--d2l-cplus-color-grey-dark-4, #494c4e)));font-size:var(--d2l-cplus-font-size-medium, 20px);line-height:30px;margin-block:var(--d2l-cplus-size-small-2, 6px);text-transform:uppercase}@media screen and (width &lt;= 768px){:host .d2l-cplus-html-container h5,:host .d2l-cplus-html-container .h5{font-size:var(--d2l-cplus-font-size-small, 16px);line-height:32px}}@media screen and (width &lt;= 400px){:host .d2l-cplus-html-container h5,:host .d2l-cplus-html-container .h5{font-size:var(--d2l-cplus-font-size-small, 16px);line-height:32px}}:host .d2l-cplus-html-container h6,:host .d2l-cplus-html-container .h6{color:var(--neutral-one-head, var(--d2l-cplus-color-neutral-one-head, var(--d2l-cplus-color-grey-dark-4, #494c4e)));font-size:var(--d2l-cplus-font-size-medium, 20px);line-height:40px;margin-block:var(--d2l-cplus-size-small-2, 6px);text-transform:uppercase}@media screen and (width &lt;= 768px){:host .d2l-cplus-html-container h6,:host .d2l-cplus-html-container .h6{font-size:var(--d2l-cplus-font-size-small, 16px);line-height:32px}}@media screen and (width &lt;= 400px){:host .d2l-cplus-html-container h6,:host .d2l-cplus-html-container .h6{font-size:var(--d2l-cplus-font-size-small, 16px);line-height:32px}}:host .d2l-cplus-html-container a{border-block-end:1px dotted var(--d2l-cplus-color-blue-dark-1, #006fbf);color:var(--d2l-cplus-color-blue-dark-1, #006fbf);font-weight:bold;text-decoration:underline}:host .d2l-cplus-html-container a:hover,:host .d2l-cplus-html-container a:focus,:host .d2l-cplus-html-container a:active{border-block-end:1px solid var(--d2l-cplus-color-blue-dark-1, #006fbf);color:var(--d2l-cplus-color-blue-dark-1, #006fbf);text-decoration:none}:host .d2l-cplus-html-container ol,:host .d2l-cplus-html-container ul{font-size:var(--d2l-cplus-font-size-base, 19px);margin-block:0 var(--d2l-cplus-size-base, 18px)}:host .d2l-cplus-html-container ol li,:host .d2l-cplus-html-container ul li{position:relative}:host .d2l-cplus-html-container ol li ul,:host .d2l-cplus-html-container ul li ul,:host .d2l-cplus-html-container ol li ol,:host .d2l-cplus-html-container ul li ol{margin-block:var(--d2l-cplus-size-small-1, 12px)}:host .d2l-cplus-html-container ul:not([class]) ol{list-style:decimal}:host .d2l-cplus-html-container ul:not([class]) ol li ol{list-style:lower-alpha}:host .d2l-cplus-html-container ol:not([class]) ol{list-style:lower-alpha}:host .d2l-cplus-html-container li:last-child{margin-block-end:0;padding-block-end:0}@media screen and (width &lt;= 768px){:host .d2l-cplus-html-container ol,:host .d2l-cplus-html-container ul{font-size:var(--d2l-cplus-font-size-small, 16px)}}:host .d2l-cplus-html-container .table-wrapper{overflow-x:auto}:host .d2l-cplus-html-container .table-wrapper table{border:1px solid var(--d2l-cplus-color-grey-dark-1, #cdd5dc);border-collapse:separate !important;border-radius:5px;border-spacing:0;color:var(--d2l-cplus-color-grey-dark-4, #494c4e);overflow-y:hidden;width:100%}:host .d2l-cplus-html-container .table-wrapper table thead{border-inline-end:none;font-size:var(--d2l-cplus-font-size-medium, 20px);font-weight:bold;line-height:var(--d2l-cplus-line-height-medium, 30px);padding:var(--d2l-cplus-size-small-1, 12px) var(--d2l-cplus-size-base, 18px);vertical-align:middle}:host .d2l-cplus-html-container .table-wrapper table thead tr{background:var(--d2l-cplus-color-grey-light-2, #f1f5fb)}:host .d2l-cplus-html-container .table-wrapper table caption{border-block-end:1px solid var(--d2l-cplus-color-grey-dark-1, #cdd5dc);border-block-start:none;border-end-end-radius:5px;border-end-start-radius:5px;font-weight:bold;min-height:20px;text-align:center;vertical-align:middle}:host .d2l-cplus-html-container .table-wrapper table th{background:var(--d2l-cplus-color-grey-light-2, #f1f5fb);border:1px solid var(--d2l-cplus-color-grey-dark-1, #cdd5dc);border-block-end:1px solid var(--d2l-cplus-color-grey-dark-1, #cdd5dc);border-inline-start:1px solid var(--d2l-cplus-color-grey-dark-1, #cdd5dc);color:var(--d2l-cplus-color-grey-dark-4, #494c4e);font-size:var(--d2l-cplus-font-size-base, 19px);font-weight:bold;line-height:30px;padding:var(--d2l-cplus-size-base, 18px)}:host .d2l-cplus-html-container .table-wrapper table th:first-child{border-inline-end:1px solid var(--d2l-cplus-color-grey-dark-1, #cdd5dc);border-inline-start:none;border-start-start-radius:5px}:host .d2l-cplus-html-container .table-wrapper table th:last-child{border-inline-end:none;border-start-end-radius:5px}:host .d2l-cplus-html-container .table-wrapper table td{border:1px solid var(--d2l-cplus-color-grey-dark-1, #cdd5dc);border-block-start:none;border-inline-end:none;font-size:var(--d2l-cplus-font-size-base, 19px);padding:var(--d2l-cplus-size-base, 18px)}:host .d2l-cplus-html-container .table-wrapper table td:first-child{border-inline-start:none}:host .d2l-cplus-html-container .table-wrapper table td:last-child{border-inline-end:none}:host .d2l-cplus-html-container .table-wrapper table tbody{border-end-start-radius:5px}:host .d2l-cplus-html-container .table-wrapper table tbody tr:last-child td{border-block-end:none}:host .d2l-cplus-html-container .table-wrapper table tbody tr:last-child th:first-child,:host .d2l-cplus-html-container .table-wrapper table tbody tr:last-child td:first-child{border-end-start-radius:5px}:host .d2l-cplus-html-container .table-wrapper table tbody tr:last-child th:last-child,:host .d2l-cplus-html-container .table-wrapper table tbody tr:last-child td:last-child{border-end-end-radius:5px}:host .d2l-cplus-html-container .table-wrapper table tbody tr th{background:var(--d2l-cplus-color-grey-light-2, #f1f5fb);border-block-end:1px solid var(--d2l-cplus-color-grey-dark-1, #cdd5dc);border-inline-end:none;font-size:var(--d2l-cplus-font-size-medium, 20px);font-weight:bold;line-height:30px;padding:var(--d2l-cplus-size-small-1, 12px) var(--d2l-cplus-size-base, 18px);vertical-align:middle}:host .d2l-cplus-html-container .table-wrapper table tbody tr th:first-child{border-start-start-radius:5px}:host .d2l-cplus-html-container .table-wrapper table tbody tr th:last-child{border-start-end-radius:5px}:host .d2l-cplus-html-container .table-wrapper table p,:host .d2l-cplus-html-container .table-wrapper table a,:host .d2l-cplus-html-container .table-wrapper table ol,:host .d2l-cplus-html-container .table-wrapper table ul{color:var(--d2l-cplus-color-grey-dark-4, #494c4e)}:host .d2l-cplus-html-container .table-wrapper table p:last-child{margin-block-end:0}:host .d2l-cplus-html-container .table-wrapper table caption+thead+tbody tr:last-child th:first-child,:host .d2l-cplus-html-container .table-wrapper table caption+thead+tbody tr:last-child td:first-child{border-end-start-radius:0}:host .d2l-cplus-html-container .table-wrapper table caption+thead+tbody tr:last-child th:last-child,:host .d2l-cplus-html-container .table-wrapper table caption+thead+tbody tr:last-child td:last-child{border-end-end-radius:0}:host .d2l-cplus-html-container *{box-sizing:border-box}:host .d2l-cplus-html-container p{font-family:var(--d2l-cplus-font-family-body, &quot;Lato&quot;, &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, sans-serif);font-size:var(--d2l-cplus-font-size-base, 19px);line-height:var(--d2l-cplus-line-height-base, 28px);margin-block:0 var(--d2l-cplus-size-base, 18px)}@media screen and (width &lt;= 768px){:host .d2l-cplus-html-container p{font-size:var(--d2l-cplus-font-size-small, 16px);line-height:var(--d2l-cplus-line-height-small, 24px)}}:host .d2l-cplus-html-container p&gt;*{max-width:100%}:host .d2l-cplus-html-container&gt;:first-child{margin-block-start:0}:host .d2l-cplus-html-container&gt;:last-child{margin-block-end:0}:host .d2l-cplus-html-container .d2l-cplus-layout{container-name:d2l-cplus-layout;container-type:inline-size;display:grid;grid-template-rows:auto;margin-block:0;margin-inline:calc(var(--d2l-cplus-size-base, 18px)*-1);min-height:30px;width:calc(100% + 2*var(--d2l-cplus-size-base, 18px))}:host .d2l-cplus-html-container .d2l-cplus-layout::after{clear:both;content:&quot; &quot;;display:block;height:0;visibility:hidden}:host .d2l-cplus-html-container .d2l-cplus-layout-column{padding-block:0;padding-inline:var(--d2l-cplus-size-base, 18px);word-wrap:break-word}:host .d2l-cplus-html-container .d2l-cplus-layout-half{grid-template-columns:repeat(2, 50%)}:host .d2l-cplus-html-container .d2l-cplus-layout-thirds{grid-template-columns:repeat(3, minmax(33%, 1fr))}:host .d2l-cplus-html-container .d2l-cplus-layout-one-third{grid-template-columns:minmax(33%, 1fr) minmax(66%, 1fr)}:host .d2l-cplus-html-container .d2l-cplus-layout-two-third{grid-template-columns:minmax(66%, 2fr) minmax(33%, 1fr)}:host .d2l-cplus-html-container .d2l-cplus-layout iframe{max-width:100%}@container d2l-cplus-layout (width &lt;= 822px){:host .d2l-cplus-html-container .d2l-cplus-layout-column{padding-inline:var(--d2l-cplus-size-small-1, 12px)}:host .d2l-cplus-html-container .d2l-cplus-layout-column:first-of-type{padding-inline-start:var(--d2l-cplus-size-base, 18px)}:host .d2l-cplus-html-container .d2l-cplus-layout-column:last-of-type{padding-inline-end:var(--d2l-cplus-size-base, 18px)}}@container d2l-cplus-layout (width &lt;= 546px){:host .d2l-cplus-html-container .d2l-cplus-layout-column{grid-column:1/-1;padding-inline:var(--d2l-cplus-size-base, 18px)}}:host .d2l-cplus-html-container .d2l-cplus-layout{margin-inline:0;width:100%}:host .d2l-cplus-html-container .d2l-cplus-layout-column:first-child{padding-inline-start:0}:host .d2l-cplus-html-container .d2l-cplus-layout-column:last-child{padding-inline-end:0}:host .d2l-cplus-html-container.text-white{color:var(--d2l-cplus-color-light, #ffffff)}:host .d2l-cplus-html-container.text-white h1,:host .d2l-cplus-html-container.text-white h2,:host .d2l-cplus-html-container.text-white h3,:host .d2l-cplus-html-container.text-white h4,:host .d2l-cplus-html-container.text-white h5,:host .d2l-cplus-html-container.text-white h6,:host .d2l-cplus-html-container.text-white p,:host .d2l-cplus-html-container.text-white ul,:host .d2l-cplus-html-container.text-white ol,:host .d2l-cplus-html-container.text-white ol.large-number li::before,:host .d2l-cplus-html-container.text-white a{color:var(--d2l-cplus-color-light, #ffffff)}:host .d2l-cplus-html-container.text-white ul:not([class]) li::before,:host .d2l-cplus-html-container.text-white ol:not([class]) li::before{color:var(--d2l-cplus-color-light, #ffffff)}:host .d2l-cplus-html-container.text-white a:hover,:host .d2l-cplus-html-container.text-white a:focus,:host .d2l-cplus-html-container.text-white a:active{color:var(--d2l-cplus-color-light, #ffffff);text-decoration:underline;border-color:var(--d2l-cplus-color-light, #ffffff)}:host .d2l-cplus-html-container.text-white a{border-color:var(--d2l-cplus-color-light, #ffffff)}:host .d2l-cplus-html-container.text-white .icon{fill:var(--d2l-cplus-color-light, #ffffff);stroke:var(--d2l-cplus-color-light, #ffffff)}@container d2l-cplus-layout (width &lt;= 822px){:host .d2l-cplus-html-container .d2l-cplus-layout-column{padding-inline:var(--d2l-cplus-size-small-1, 12px)}}@container d2l-cplus-layout (width &lt;= 546px){:host .d2l-cplus-html-container .d2l-cplus-layout-column{padding-inline:0}}
+&lt;/style&gt;&lt;div class=&quot;d2l-cplus-html-container &quot;&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;img src=&quot;dog.jpg&quot; alt=&quot;Dog at computer&quot; height=&quot;100&quot; width=&quot;100&quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The above references a relative image in relation to the page it&#39;s included on. For example, if this code was found on a page called index.html, then &lt;code&gt;dog.jpg&lt;/code&gt; would need to be in the same folder to be displayed.&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;img src=&quot;https://hips.hearstapps.com/hmg-prod/images/shih-tzu-little-dog-royalty-free-image-1652927214.jpg&quot; alt=&quot;Dog at computer&quot; height=&quot;100&quot; width=&quot;100&quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The above references a universal image in relation to the page it&#39;s included on. For example, if code was found on a page called index.html, then &lt;code&gt;shih-tzu-little-dog-royalty-free-image-1652927214.jpg&lt;/code&gt; It would be accessed over the internet, and the image will appear as long as it still exists in that location.&amp;nbsp;&lt;/p&gt;
+&lt;/div&gt;"><template shadowrootmode="open"><!---->
+			<div class=" d2l-html-block-rendered "><style>.d2l-element,.d2l-cplus-layout{font-family:Lato,"Lucida Sans Unicode","Lucida Grande",sans-serif !important;line-height:1.5}.d2l-element *,.d2l-cplus-layout *{box-sizing:border-box}.d2l-element{container-name:d2l-cplus-element;container-type:inline-size;margin-inline:auto auto}.d2l-element .sr-only{border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px}:host .d2l-cplus-html-container{letter-spacing:.2px;line-height:1.5}:host .d2l-cplus-html-container h1,:host .d2l-cplus-html-container .h1,:host .d2l-cplus-html-container h2,:host .d2l-cplus-html-container .h2,:host .d2l-cplus-html-container h3,:host .d2l-cplus-html-container .h3,:host .d2l-cplus-html-container h4,:host .d2l-cplus-html-container .h4,:host .d2l-cplus-html-container h5,:host .d2l-cplus-html-container .h5,:host .d2l-cplus-html-container h6,:host .d2l-cplus-html-container .h6{color:var(--neutral-one-head, var(--d2l-cplus-color-neutral-one-head, var(--d2l-cplus-color-grey-dark-4, #494c4e)));font-family:var(--d2l-cplus-font-family-one) !important;font-weight:500;padding:0}:host .d2l-cplus-html-container h1,:host .d2l-cplus-html-container .h1{font-size:40px;font-weight:400;line-height:48px;margin-block:var(--d2l-cplus-size-small-1, 12px) var(--d2l-cplus-size-large-10, 78px)}@media screen and (width <= 768px){:host .d2l-cplus-html-container h1,:host .d2l-cplus-html-container .h1{font-size:40px;line-height:40px}}@media screen and (width <= 400px){:host .d2l-cplus-html-container h1,:host .d2l-cplus-html-container .h1{font-size:30px;line-height:30px}}:host .d2l-cplus-html-container h1::after,:host .d2l-cplus-html-container .h1::after{background-color:var(--primary, var(--d2l-cplus-color-primary, var(--d2l-cplus-color-blue-base, #008eab)));border:3px solid var(--primary, var(--d2l-cplus-color-primary, var(--d2l-cplus-color-blue-base, #008eab)));content:" ";display:block;margin-block:var(--d2l-cplus-size-small-1, 12px) var(--d2l-cplus-size-large-2, 30px);max-width:95px}:host .d2l-cplus-html-container h2,:host .d2l-cplus-html-container .h2{font-size:30px;font-weight:400;line-height:36px;margin-block:var(--d2l-cplus-size-small-1, 12px)}@media screen and (width <= 768px){:host .d2l-cplus-html-container h2,:host .d2l-cplus-html-container .h2{font-size:var(--d2l-cplus-font-size-medium, 20px);line-height:40px}}@media screen and (width <= 400px){:host .d2l-cplus-html-container h2,:host .d2l-cplus-html-container .h2{font-size:var(--d2l-cplus-font-size-medium, 20px);line-height:32px}}:host .d2l-cplus-html-container h3,:host .d2l-cplus-html-container .h3{font-size:var(--d2l-cplus-font-size-medium, 20px);font-weight:bold;line-height:30px;margin-block:var(--d2l-cplus-size-small-2, 6px)}@media screen and (width <= 768px){:host .d2l-cplus-html-container h3,:host .d2l-cplus-html-container .h3{font-size:var(--d2l-cplus-font-size-small, 16px);line-height:32px}}@media screen and (width <= 400px){:host .d2l-cplus-html-container h3,:host .d2l-cplus-html-container .h3{font-size:var(--d2l-cplus-font-size-small, 16px);line-height:32px}}:host .d2l-cplus-html-container h4,:host .d2l-cplus-html-container .h4{font-size:var(--d2l-cplus-font-size-medium, 20px);font-weight:500;line-height:30px;margin-block:var(--d2l-cplus-size-small-2, 6px);text-transform:uppercase}@media screen and (width <= 768px){:host .d2l-cplus-html-container h4,:host .d2l-cplus-html-container .h4{font-size:var(--d2l-cplus-font-size-small, 16px);line-height:32px}}@media screen and (width <= 400px){:host .d2l-cplus-html-container h4,:host .d2l-cplus-html-container .h4{font-size:var(--d2l-cplus-font-size-small, 16px);line-height:32px}}:host .d2l-cplus-html-container h5,:host .d2l-cplus-html-container .h5{color:var(--neutral-one-head, var(--d2l-cplus-color-neutral-one-head, var(--d2l-cplus-color-grey-dark-4, #494c4e)));font-size:var(--d2l-cplus-font-size-medium, 20px);line-height:30px;margin-block:var(--d2l-cplus-size-small-2, 6px);text-transform:uppercase}@media screen and (width <= 768px){:host .d2l-cplus-html-container h5,:host .d2l-cplus-html-container .h5{font-size:var(--d2l-cplus-font-size-small, 16px);line-height:32px}}@media screen and (width <= 400px){:host .d2l-cplus-html-container h5,:host .d2l-cplus-html-container .h5{font-size:var(--d2l-cplus-font-size-small, 16px);line-height:32px}}:host .d2l-cplus-html-container h6,:host .d2l-cplus-html-container .h6{color:var(--neutral-one-head, var(--d2l-cplus-color-neutral-one-head, var(--d2l-cplus-color-grey-dark-4, #494c4e)));font-size:var(--d2l-cplus-font-size-medium, 20px);line-height:40px;margin-block:var(--d2l-cplus-size-small-2, 6px);text-transform:uppercase}@media screen and (width <= 768px){:host .d2l-cplus-html-container h6,:host .d2l-cplus-html-container .h6{font-size:var(--d2l-cplus-font-size-small, 16px);line-height:32px}}@media screen and (width <= 400px){:host .d2l-cplus-html-container h6,:host .d2l-cplus-html-container .h6{font-size:var(--d2l-cplus-font-size-small, 16px);line-height:32px}}:host .d2l-cplus-html-container a{border-block-end:1px dotted var(--d2l-cplus-color-blue-dark-1, #006fbf);color:var(--d2l-cplus-color-blue-dark-1, #006fbf);font-weight:bold;text-decoration:underline}:host .d2l-cplus-html-container a:hover,:host .d2l-cplus-html-container a:focus,:host .d2l-cplus-html-container a:active{border-block-end:1px solid var(--d2l-cplus-color-blue-dark-1, #006fbf);color:var(--d2l-cplus-color-blue-dark-1, #006fbf);text-decoration:none}:host .d2l-cplus-html-container ol,:host .d2l-cplus-html-container ul{font-size:var(--d2l-cplus-font-size-base, 19px);margin-block:0 var(--d2l-cplus-size-base, 18px)}:host .d2l-cplus-html-container ol li,:host .d2l-cplus-html-container ul li{position:relative}:host .d2l-cplus-html-container ol li ul,:host .d2l-cplus-html-container ul li ul,:host .d2l-cplus-html-container ol li ol,:host .d2l-cplus-html-container ul li ol{margin-block:var(--d2l-cplus-size-small-1, 12px)}:host .d2l-cplus-html-container ul:not([class]) ol{list-style:decimal}:host .d2l-cplus-html-container ul:not([class]) ol li ol{list-style:lower-alpha}:host .d2l-cplus-html-container ol:not([class]) ol{list-style:lower-alpha}:host .d2l-cplus-html-container li:last-child{margin-block-end:0;padding-block-end:0}@media screen and (width <= 768px){:host .d2l-cplus-html-container ol,:host .d2l-cplus-html-container ul{font-size:var(--d2l-cplus-font-size-small, 16px)}}:host .d2l-cplus-html-container .table-wrapper{overflow-x:auto}:host .d2l-cplus-html-container .table-wrapper table{border:1px solid var(--d2l-cplus-color-grey-dark-1, #cdd5dc);border-collapse:separate !important;border-radius:5px;border-spacing:0;color:var(--d2l-cplus-color-grey-dark-4, #494c4e);overflow-y:hidden;width:100%}:host .d2l-cplus-html-container .table-wrapper table thead{border-inline-end:none;font-size:var(--d2l-cplus-font-size-medium, 20px);font-weight:bold;line-height:var(--d2l-cplus-line-height-medium, 30px);padding:var(--d2l-cplus-size-small-1, 12px) var(--d2l-cplus-size-base, 18px);vertical-align:middle}:host .d2l-cplus-html-container .table-wrapper table thead tr{background:var(--d2l-cplus-color-grey-light-2, #f1f5fb)}:host .d2l-cplus-html-container .table-wrapper table caption{border-block-end:1px solid var(--d2l-cplus-color-grey-dark-1, #cdd5dc);border-block-start:none;border-end-end-radius:5px;border-end-start-radius:5px;font-weight:bold;min-height:20px;text-align:center;vertical-align:middle}:host .d2l-cplus-html-container .table-wrapper table th{background:var(--d2l-cplus-color-grey-light-2, #f1f5fb);border:1px solid var(--d2l-cplus-color-grey-dark-1, #cdd5dc);border-block-end:1px solid var(--d2l-cplus-color-grey-dark-1, #cdd5dc);border-inline-start:1px solid var(--d2l-cplus-color-grey-dark-1, #cdd5dc);color:var(--d2l-cplus-color-grey-dark-4, #494c4e);font-size:var(--d2l-cplus-font-size-base, 19px);font-weight:bold;line-height:30px;padding:var(--d2l-cplus-size-base, 18px)}:host .d2l-cplus-html-container .table-wrapper table th:first-child{border-inline-end:1px solid var(--d2l-cplus-color-grey-dark-1, #cdd5dc);border-inline-start:none;border-start-start-radius:5px}:host .d2l-cplus-html-container .table-wrapper table th:last-child{border-inline-end:none;border-start-end-radius:5px}:host .d2l-cplus-html-container .table-wrapper table td{border:1px solid var(--d2l-cplus-color-grey-dark-1, #cdd5dc);border-block-start:none;border-inline-end:none;font-size:var(--d2l-cplus-font-size-base, 19px);padding:var(--d2l-cplus-size-base, 18px)}:host .d2l-cplus-html-container .table-wrapper table td:first-child{border-inline-start:none}:host .d2l-cplus-html-container .table-wrapper table td:last-child{border-inline-end:none}:host .d2l-cplus-html-container .table-wrapper table tbody{border-end-start-radius:5px}:host .d2l-cplus-html-container .table-wrapper table tbody tr:last-child td{border-block-end:none}:host .d2l-cplus-html-container .table-wrapper table tbody tr:last-child th:first-child,:host .d2l-cplus-html-container .table-wrapper table tbody tr:last-child td:first-child{border-end-start-radius:5px}:host .d2l-cplus-html-container .table-wrapper table tbody tr:last-child th:last-child,:host .d2l-cplus-html-container .table-wrapper table tbody tr:last-child td:last-child{border-end-end-radius:5px}:host .d2l-cplus-html-container .table-wrapper table tbody tr th{background:var(--d2l-cplus-color-grey-light-2, #f1f5fb);border-block-end:1px solid var(--d2l-cplus-color-grey-dark-1, #cdd5dc);border-inline-end:none;font-size:var(--d2l-cplus-font-size-medium, 20px);font-weight:bold;line-height:30px;padding:var(--d2l-cplus-size-small-1, 12px) var(--d2l-cplus-size-base, 18px);vertical-align:middle}:host .d2l-cplus-html-container .table-wrapper table tbody tr th:first-child{border-start-start-radius:5px}:host .d2l-cplus-html-container .table-wrapper table tbody tr th:last-child{border-start-end-radius:5px}:host .d2l-cplus-html-container .table-wrapper table p,:host .d2l-cplus-html-container .table-wrapper table a,:host .d2l-cplus-html-container .table-wrapper table ol,:host .d2l-cplus-html-container .table-wrapper table ul{color:var(--d2l-cplus-color-grey-dark-4, #494c4e)}:host .d2l-cplus-html-container .table-wrapper table p:last-child{margin-block-end:0}:host .d2l-cplus-html-container .table-wrapper table caption+thead+tbody tr:last-child th:first-child,:host .d2l-cplus-html-container .table-wrapper table caption+thead+tbody tr:last-child td:first-child{border-end-start-radius:0}:host .d2l-cplus-html-container .table-wrapper table caption+thead+tbody tr:last-child th:last-child,:host .d2l-cplus-html-container .table-wrapper table caption+thead+tbody tr:last-child td:last-child{border-end-end-radius:0}:host .d2l-cplus-html-container *{box-sizing:border-box}:host .d2l-cplus-html-container p{font-family:var(--d2l-cplus-font-family-body, "Lato", "Lucida Sans Unicode", "Lucida Grande", sans-serif);font-size:var(--d2l-cplus-font-size-base, 19px);line-height:var(--d2l-cplus-line-height-base, 28px);margin-block:0 var(--d2l-cplus-size-base, 18px)}@media screen and (width <= 768px){:host .d2l-cplus-html-container p{font-size:var(--d2l-cplus-font-size-small, 16px);line-height:var(--d2l-cplus-line-height-small, 24px)}}:host .d2l-cplus-html-container p>*{max-width:100%}:host .d2l-cplus-html-container>:first-child{margin-block-start:0}:host .d2l-cplus-html-container>:last-child{margin-block-end:0}:host .d2l-cplus-html-container .d2l-cplus-layout{container-name:d2l-cplus-layout;container-type:inline-size;display:grid;grid-template-rows:auto;margin-block:0;margin-inline:calc(var(--d2l-cplus-size-base, 18px)*-1);min-height:30px;width:calc(100% + 2*var(--d2l-cplus-size-base, 18px))}:host .d2l-cplus-html-container .d2l-cplus-layout::after{clear:both;content:" ";display:block;height:0;visibility:hidden}:host .d2l-cplus-html-container .d2l-cplus-layout-column{padding-block:0;padding-inline:var(--d2l-cplus-size-base, 18px);word-wrap:break-word}:host .d2l-cplus-html-container .d2l-cplus-layout-half{grid-template-columns:repeat(2, 50%)}:host .d2l-cplus-html-container .d2l-cplus-layout-thirds{grid-template-columns:repeat(3, minmax(33%, 1fr))}:host .d2l-cplus-html-container .d2l-cplus-layout-one-third{grid-template-columns:minmax(33%, 1fr) minmax(66%, 1fr)}:host .d2l-cplus-html-container .d2l-cplus-layout-two-third{grid-template-columns:minmax(66%, 2fr) minmax(33%, 1fr)}:host .d2l-cplus-html-container .d2l-cplus-layout iframe{max-width:100%}@container d2l-cplus-layout (width <= 822px){:host .d2l-cplus-html-container .d2l-cplus-layout-column{padding-inline:var(--d2l-cplus-size-small-1, 12px)}:host .d2l-cplus-html-container .d2l-cplus-layout-column:first-of-type{padding-inline-start:var(--d2l-cplus-size-base, 18px)}:host .d2l-cplus-html-container .d2l-cplus-layout-column:last-of-type{padding-inline-end:var(--d2l-cplus-size-base, 18px)}}@container d2l-cplus-layout (width <= 546px){:host .d2l-cplus-html-container .d2l-cplus-layout-column{grid-column:1/-1;padding-inline:var(--d2l-cplus-size-base, 18px)}}:host .d2l-cplus-html-container .d2l-cplus-layout{margin-inline:0;width:100%}:host .d2l-cplus-html-container .d2l-cplus-layout-column:first-child{padding-inline-start:0}:host .d2l-cplus-html-container .d2l-cplus-layout-column:last-child{padding-inline-end:0}:host .d2l-cplus-html-container.text-white{color:var(--d2l-cplus-color-light, #ffffff)}:host .d2l-cplus-html-container.text-white h1,:host .d2l-cplus-html-container.text-white h2,:host .d2l-cplus-html-container.text-white h3,:host .d2l-cplus-html-container.text-white h4,:host .d2l-cplus-html-container.text-white h5,:host .d2l-cplus-html-container.text-white h6,:host .d2l-cplus-html-container.text-white p,:host .d2l-cplus-html-container.text-white ul,:host .d2l-cplus-html-container.text-white ol,:host .d2l-cplus-html-container.text-white ol.large-number li::before,:host .d2l-cplus-html-container.text-white a{color:var(--d2l-cplus-color-light, #ffffff)}:host .d2l-cplus-html-container.text-white ul:not([class]) li::before,:host .d2l-cplus-html-container.text-white ol:not([class]) li::before{color:var(--d2l-cplus-color-light, #ffffff)}:host .d2l-cplus-html-container.text-white a:hover,:host .d2l-cplus-html-container.text-white a:focus,:host .d2l-cplus-html-container.text-white a:active{color:var(--d2l-cplus-color-light, #ffffff);text-decoration:underline;border-color:var(--d2l-cplus-color-light, #ffffff)}:host .d2l-cplus-html-container.text-white a{border-color:var(--d2l-cplus-color-light, #ffffff)}:host .d2l-cplus-html-container.text-white .icon{fill:var(--d2l-cplus-color-light, #ffffff);stroke:var(--d2l-cplus-color-light, #ffffff)}@container d2l-cplus-layout (width <= 822px){:host .d2l-cplus-html-container .d2l-cplus-layout-column{padding-inline:var(--d2l-cplus-size-small-1, 12px)}}@container d2l-cplus-layout (width <= 546px){:host .d2l-cplus-html-container .d2l-cplus-layout-column{padding-inline:0}}
+</style><div class="d2l-cplus-html-container ">
+<p><code>&lt;img src="dog.jpg" alt="Dog at computer" height="100" width="100"&gt;</code></p>
+<p>The above references a relative image in relation to the page it's included on. For example, if this code was found on a page called index.html, then <code>dog.jpg</code> would need to be in the same folder to be displayed.&nbsp;&nbsp;</p>
+<p><code>&lt;img src="https://hips.hearstapps.com/hmg-prod/images/shih-tzu-little-dog-royalty-free-image-1652927214.jpg" alt="Dog at computer" height="100" width="100"&gt;</code></p>
+<p>The above references a universal image in relation to the page it's included on. For example, if code was found on a page called index.html, then <code>shih-tzu-little-dog-royalty-free-image-1652927214.jpg</code> It would be accessed over the internet, and the image will appear as long as it still exists in that location.&nbsp;</p>
+</div></div>
+			<!--?lit$930384425$-->
+		</template></d2l-html-block>
+		</template></d2l-cplus-html-block>
+							</div>
+						</d2l-expand-collapse-content>
+					</div>
+				</div>
+			
+			</div>
+		</template></d2l-cplus-click-to-reveal>
+<h3>HTML or CSS?</h3>
+<p>This notes page has focused on the different types of graphics and how to embed them using HTML. However, based on your readings for this module, you also learned how to include images on a web page via CSS.&nbsp;</p>
+<p>The general rule of thumb is simple on this:&nbsp;</p>
+<ul>
+<li>If the image is part of the content, use the HTML img tag with all accessibility attributes.</li>
+<li>If the image serves an aesthetic purpose, like adding visual flare, a texture, etc, and is not part of the content, then that image should be included via CSS and not HTML.&nbsp;</li>
+</ul>
+<div class="well well-solid">
+<div class="well-text">
+<p>Remember, HTML is for your content. CSS is for layout and design. If you remove the CSS, the content should still be accessible and contain any images the content requires.&nbsp;</p>
+</div>
+</div>
+<h2>Activity: Creating a Splash Page</h2>
+<p><a href="https://ccbcmd.brightspace.com/d2l/common/dialogs/quickLink/quickLink.d2l?ou=157344&amp;type=discuss&amp;rcode=7858EE3C-66E2-4233-8682-BEB1A8717474-2223409" target="_self" rel="noopener">Click here to complete this activity and participate in the discussion.</a></p>
+<ul class="icon-list-check"></ul>
+<div class="jumbotron">
+<p>Remember, participation in these discussions is required and part of your grade in the course. Please complete all the activities above before moving ahead with the module.&nbsp;</p>
+</div>
+<p></p>
+</div>
+<footer><strong></strong></footer></div>
+</main></div>
+<!-- jQuery local fallback (Bootstrap Dependency) -->
+<p>
+<script src="./jquery-1.11.3.min.js.download"></script>
+</p>
+<!-- Bootstrap CDN JS -->
+<p>
+<script src="./bootstrap.min.js.download"></script>
+</p>
+<!-- SVG Fallback JS -->
+<p>
+<script src="./svg4everybody.min.js.download"></script>
+</p>
+<!-- Course Scripts -->
+<p>
+<script src="./main.min.js.download"></script>
+</p></body></html>
