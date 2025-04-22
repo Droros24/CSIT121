@@ -1,0 +1,87 @@
+nav {
+    background-color: #1b7cdd;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+
+
+table {
+    width: 600px;
+    border-collapse: collapse;
+    margin: 20px 0;
+    height: 600px;
+  }
+  th,td{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+  }
+   
+  th {
+    background-color: gray;
+    font-style: bold;
+  }
+  tr:nth-child(1){
+    background-color:rgb(248, 67, 12) ;
+  }
+  tr:nth-child(2){
+    background-color:rgb(255, 230, 0) ;
+  }
+  tr:nth-child(3){
+    background-color:rgb(55, 236, 18) ;
+  }
+  tr:nth-child(4){
+    background-color:rgb(11, 157, 241) ;
+  }
+  tr:nth-child(5){
+    background-color:rgb(212, 0, 255) ;
+  }
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    max-width: 600px;
+  }
+  
+  input, select, textarea, button{
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding-inline-start: 10px;
+    height: fit-content;
+  }
+  
+  .container {
+    max-width: 700px;
+    margin: auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .inline-group {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+  }
+  
+  .inline-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  img{
+padding: 5px;
+  width: 100px;
+
+  }
