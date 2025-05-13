@@ -9,4 +9,5 @@ Home of my HTML projects this semester.
 <a href="lab07/tierlist.html" target="_blank">lab 07</a> 
 <a href="lab08/image1.html" target="_blank">lab 08</a> 
 <a href="lab09/index.html" target="_blank">lab 09</a> 
+<a href="final/index.html" target="_blank">Final</a> 
 
